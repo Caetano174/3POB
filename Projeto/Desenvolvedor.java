@@ -2,22 +2,22 @@ package model;
 
 public class Desenvolvedor extends Funcionario implements Desenvolve {
 
-    public Desenvolvedor(String nome, double salario) {
-        super(nome, salario);
+    public Desenvolvedor(int id, String nome, double salario) {
+        super(id, nome, salario);
     }
 
     @Override
     public void codar() {
-        System.out.println(getNome() + " está codando...");
+        System.out.println("Codificando...");
     }
 
     @Override
     public void resolverProblemas() {
-        System.out.println(getNome() + " está resolvendo problemas técnicos.");
+        System.out.println("Resolvendo problemas técnicos...");
     }
 
     @Override
     public String mostrarDetalhes() {
-        return "Desenvolvedor: " + getNome() + ", Salário: " + getSalario();
+        return "ID: " + getId() + " | Desenvolvedor: " + getNome() + " | Salário: " + getSalario();
     }
 }
